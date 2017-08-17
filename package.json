@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/manbo91/react-easy-styeld-components/issues"
   },
-  "homepage": "https://github.com/manbo91/react-easy-styeld-components#readme"
+  "homepage": "https://github.com/manbo91/react-easy-styeld-components#readme",
+  "dependencies": {
+    "styled-components": "^2.1.2"
+  }
 }

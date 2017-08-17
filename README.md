@@ -1,1 +1,1 @@
-# react-styled-components
+# react-easy-styled-components
