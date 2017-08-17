@@ -86,7 +86,7 @@ export default class ReactEasyStyledComponent extends Component {
 }
 ```
 
-![Image of Example Code](https://firebasestorage.googleapis.com/v0/b/npm-storage.appspot.com/o/react-easy-styled-components.png?alt=media&token=6c9b0823-3be1-405b-803c-2ce3ef281a49)
+![Image of Example Code](https://firebasestorage.googleapis.com/v0/b/npm-storage.appspot.com/o/react_easy_styled_components_example1.png?alt=media&token=8cb948b5-9e2b-481e-be48-5851c0a3e9c4)
 
 
 ## \<FlexView />
