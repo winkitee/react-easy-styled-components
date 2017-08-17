@@ -16,7 +16,7 @@ export const FlexView = styled.div`
 
 export const View = styled.div`
   display: flex;
-  flex: ${props => props.flex ? props.flex : '1'};
+  flex: ${props => props.flex || '1'};
   ${props => props.color && `background-color: ${props.color};`}
   ${props => props.alignEnd && 'align-items: flex-end;'}
   ${props => props.alignStart && 'align-items: flex-start;'}
