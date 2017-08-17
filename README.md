@@ -7,6 +7,9 @@ It was created by applying styled-components with reference to react-native styl
 ```
 $npm install --save react-easy-styled-components
 ```
+
+## example
+
 ```javascript
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
