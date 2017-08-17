@@ -87,14 +87,14 @@ export default class ReactEasyStyledComponent extends Component {
 
 
 ### <FlexView />
-FlexView props
+### FlexView props
 
 `row` : flex-deirection: row; default: `column`
 
 `height`: Specify view height. ex. `height="300px"`
 
 ### <View />
-View props
+### View props
 
 `flex`: Specify flex. ex. `flex="3"`
 
@@ -113,7 +113,7 @@ View props
 `justifyAround`: justify-content: space-around; default: `center`
 
 ### <Text />
-Text props
+### Text props
 
 `size`: Specify font-size. ex. `size="25px"`
 
