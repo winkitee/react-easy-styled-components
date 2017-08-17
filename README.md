@@ -90,13 +90,13 @@ export default class ReactEasyStyledComponent extends Component {
 
 `row` : flex-deirection: row; default: `column`
 
-`height`: Specify view height. ex. `height="300px"`
+`height`: Specify view height. ex.`height="300px"`
 
 ## \<View />
 
-`flex`: Specify flex. ex. `flex="3"`
+`flex`: Specify flex. ex.`flex="3"`
 
-`color`: Specify background-color. ex. `color="LightBlue"`
+`color`: Specify background-color. ex.`color="LightBlue"`
 
 `alignEnd`: align-items: flex-end; default: `center`
 
@@ -112,15 +112,15 @@ export default class ReactEasyStyledComponent extends Component {
 
 ## \<Text />
 
-`size`: Specify font-size. ex. `size="25px"`
+`size`: Specify font-size. ex.`size="25px"`
 
-`color`: Specify color. ex. `color="#333"`
+`color`: Specify color. ex.`color="#333"`
 
-`weight`: Specify font-weight. ex. `weight="300"`
+`weight`: Specify font-weight. ex.`weight="300"`
 
-`margin`: Specify margin. ex. `margin="0 0 20px 20px"`
+`margin`: Specify margin. ex.`margin="0 0 20px 20px"`
 
-`padding`: Specify padding. ex. `padding="0 20px"`
+`padding`: Specify padding. ex.`padding="0 20px"`
 
 `button`: Create with fadeIn text button.
 
