@@ -85,19 +85,16 @@ export default class ReactEasyStyledComponent extends Component {
 
 ![Image of Example Code](https://firebasestorage.googleapis.com/v0/b/npm-storage.appspot.com/o/react-easy-styled-components.png?alt=media&token=6c9b0823-3be1-405b-803c-2ce3ef281a49)
 
----
 
-## <FlexView />
-
----
+### <FlexView />
+FlexView props
 
 `row` : flex-deirection: row; default: `column`
 
 `height`: Specify view height. ex. `height="300px"`
 
-## <View />
-
----
+### <View />
+View props
 
 `flex`: Specify flex. ex. `flex="3"`
 
@@ -115,9 +112,8 @@ export default class ReactEasyStyledComponent extends Component {
 
 `justifyAround`: justify-content: space-around; default: `center`
 
-## <Text />
-
----
+### <Text />
+Text props
 
 `size`: Specify font-size. ex. `size="25px"`
 
@@ -131,7 +127,7 @@ export default class ReactEasyStyledComponent extends Component {
 
 `button`: Create with fadeIn text button.
 
-## Theme
+### Theme
 ---
 ```javascript
 const theme = {
