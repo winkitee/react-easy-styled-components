@@ -87,13 +87,13 @@ export default class ReactEasyStyledComponent extends Component {
 
 
 ## \<FlexView />
----
+
 `row` : flex-deirection: row; default: `column`
 
 `height`: Specify view height. ex. `height="300px"`
 
 ## \<View />
----
+
 `flex`: Specify flex. ex. `flex="3"`
 
 `color`: Specify background-color. ex. `color="LightBlue"`
@@ -111,7 +111,7 @@ export default class ReactEasyStyledComponent extends Component {
 `justifyAround`: justify-content: space-around; default: `center`
 
 ## \<Text />
----
+
 `size`: Specify font-size. ex. `size="25px"`
 
 `color`: Specify color. ex. `color="#333"`
@@ -125,7 +125,6 @@ export default class ReactEasyStyledComponent extends Component {
 `button`: Create with fadeIn text button.
 
 ## Theme
----
 ```javascript
 const theme = {
   textMargin: '0 5px',
