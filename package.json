@@ -1,7 +1,7 @@
 {
   "name": "react-easy-styled-components",
-  "version": "0.0.2",
-  "description": "I made it easy to style",
+  "version": "0.0.3",
+  "description": "It was created by applying styled-components with reference to react-native style.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
