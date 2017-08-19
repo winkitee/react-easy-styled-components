@@ -13,7 +13,16 @@ $npm install --save react-easy-styled-components
 ```javascript
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { FlexView, View, Text } from 'react-easy-styled-components';
+import ReactEasyStyledComponents from 'react-easy-styled-components';
+
+const sizes = {
+  desktop: 1068,
+  tablet: 820,
+  phone: 360,
+}
+
+// Apply media size
+const { FlexView, View, Text } = new ReactEasyStyledComponents(sizes);
 
 const theme = {
   textMargin: '0 5px',
@@ -29,7 +38,7 @@ export default class ReactEasyStyledComponent extends Component {
       <ThemeProvider theme={theme}>
         <div>
           <FlexView height="280px">
-            <View color="rgb(240, 240, 240)">
+            <View backColor="rgb(240, 240, 240)">
               <Text margin="20px" size="30px" weight="600">hello manbo</Text>
               <Text color="LightBlue">LightBlue</Text>
               <Text
@@ -41,41 +50,41 @@ export default class ReactEasyStyledComponent extends Component {
                 LightCoral Button
               </Text>
             </View>
-            <View color="rgb(50, 50, 50)">
+            <View backColor="rgb(50, 50, 50)">
               <Text color="#fff" margin="10px">hello</Text>
               <Text color="#fff" margin="0 10px">bye</Text>
             </View>
           </FlexView>
           <FlexView row height="300px">
-            <View flex="2" color="LightBlue" justifyEnd>
+            <View flex="2" backColor="LightBlue" justifyEnd>
               <Text>justifyEnd</Text>
             </View>
-            <View flex="2" color="LightCoral" justifyStart>
+            <View flex="2" backColor="LightCoral" justifyStart>
               <Text>justifyStart</Text>
             </View>
-            <View flex={3} color="LemonChiffon" justifyBetween>
+            <View flex={3} backColor="LemonChiffon" justifyBetween>
               <Text>1</Text>
               <Text>2</Text>
               <Text>3</Text>
             </View>
-            <View flex="4" color="LightGreen" justifyAround>
+            <View flex="4" backColor="LightGreen" justifyAround>
               <Text>1</Text>
               <Text>2</Text>
               <Text>3</Text>
             </View>
           </FlexView>
           <FlexView row height="300px">
-            <View alignEnd color="rgb(240, 240, 240)">
+            <View alignEnd backColor="rgb(240, 240, 240)">
               <Text>alignEnd</Text>
               <Text>alignEnd</Text>
               <Text>alignEnd</Text>
             </View>
-            <View alignStart color="rgb(230, 230, 230)">
+            <View alignStart backColor="rgb(230, 230, 230)">
               <Text>alignStart</Text>
               <Text>alignStart</Text>
               <Text>alignStart</Text>
             </View>
-            <View color="rgb(220, 220, 220)">
+            <View backColor="rgb(220, 220, 220)">
               <Text>alignDefault Center</Text>
             </View>
           </FlexView>
@@ -88,18 +97,55 @@ export default class ReactEasyStyledComponent extends Component {
 
 ![Image of Example Code](https://firebasestorage.googleapis.com/v0/b/npm-storage.appspot.com/o/react_easy_styled_components_example1.png?alt=media&token=8cb948b5-9e2b-481e-be48-5851c0a3e9c4)
 
+## Public Props
+
+`display` : Specify display `default: flex`
+
+`width`: Specify width. `ex) width="100%"`
+
+`height`: Specify height. `ex) height="300px"`
+
+`backColor`: Specify background-color. `ex) color="LightBlue"`
+
+`margin`: Specify margin. `ex) margin="0 0 20px 20px"`
+
+`padding`: Specify padding. `ex) padding="0 20px"`
+
+`border`: Specify border. `ex) border="1px solid gray"`
+
+`zIndex`: Specify z-index. `ex) zIndex={-1}`
+
+`backgroundImage`: Specify background-image. `ex) backgroundImage="url(/img.png)"`
+
+`opacity`: Specify opacity. `ex) opacity={0.3}`
+
+`animation`: Specify animation. `ex) animation={styledComponentAnimationProps}`
+
+`desktopShow`: Show when in desktop media size. `ex) desktopShow`
+
+`desktopNone`: Hide when in desktop media size. `ex) desktopNone`
+
+`tabletShow`: Show when in tablet media size. `ex) tabletShow`
+
+`tabletNone`: Hide when in tablet media size. `ex) tabletNone`
+
+`phoneShow`: Show when in phone media size. `ex) phoneShow`
+
+`phoneNone`: Hide when in phone media size. `ex) phoneNone`
+
+`desktop`: Specify css when in desktop media size. `ex) desktop="color: red;"`
+
+`tablet`: Specify css when in tablet media size. `ex) tablet="background-color: blue;"`
+
+`phone`: Specify css when in phone media size. `ex) phone="top: 20px;"`
 
 ## \<FlexView />
 
-`row` : flex-deirection: row; default: `column`
-
-`height`: Specify view height. ex.`height="300px"`
+`row` : flex-deirection: row; `default: column`
 
 ## \<View />
 
 `flex`: Specify flex. ex.`flex="3"`
-
-`color`: Specify background-color. ex.`color="LightBlue"`
 
 `alignEnd`: align-items: flex-end; default: `center`
 
@@ -121,10 +167,6 @@ export default class ReactEasyStyledComponent extends Component {
 
 `weight`: Specify font-weight. ex.`weight="300"`
 
-`margin`: Specify margin. ex.`margin="0 0 20px 20px"`
-
-`padding`: Specify padding. ex.`padding="0 20px"`
-
 `button`: Create with fadeIn text button.
 
 ## Theme
@@ -136,4 +178,56 @@ const theme = {
   fontSize: '16px',
   fontWeight: '400'
 };
+```
+
+## Media Usage
+
+### basic
+```javascript
+// default media size
+// desktop: 992,
+// tablet: 768,
+// phone: 376
+
+import ReactEasyStyledComponents from 'react-easy-styled-component';
+const { FlexView, View, Text, AbsoluteView } = new ReactEasyStyledComponents();
+```
+
+### custom sizes
+```javascript
+// custom
+import ReactEasyStyledComponents from 'react-easy-styled-component';
+
+const sizes = {
+  desktop: 1220,
+  tablet: 830,
+  phone: 414,
+}
+
+const { FlexView, View, Text, AbsoluteView } = new ReactEasyStyledComponents(sizes);
+```
+
+### example
+```javascript
+import React, { Component } from 'react';
+import ReactEasyStyledComponents from 'react-easy-styled-component';
+const { FlexView, View } = new ReactEasyStyledComponents();
+
+export default class Example extends Component {
+  render() {
+    return (
+      <FlexView height="500px">
+        <View backColor="LightGreen" tabletNone />
+        <View backColor="LightBlue" display="none" phoneShow />
+        <View backColor="LightCoral" phoneNone />
+        <View 
+          backColor="gray"
+          desktop="background-color: red;"
+          tablet="background-color: blue;"
+          phone="background-color: green;"
+        />
+      </FlexView>
+    );
+  }
+}
 ```
