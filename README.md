@@ -105,7 +105,7 @@ export default class ReactEasyStyledComponent extends Component {
 
 `height`: Specify height. `ex) height="300px"`
 
-`backColor`: Specify background-color. `ex) color="LightBlue"`
+`backColor`: Specify background-color. `ex) backColor="LightBlue"`
 
 `margin`: Specify margin. `ex) margin="0 0 20px 20px"`
 
@@ -123,15 +123,15 @@ export default class ReactEasyStyledComponent extends Component {
 
 `desktopShow`: Show when in desktop media size. `ex) desktopShow`
 
-`desktopNone`: Hide when in desktop media size. `ex) desktopNone`
+`desktopHide`: Hide when in desktop media size. `ex) desktopHide`
 
 `tabletShow`: Show when in tablet media size. `ex) tabletShow`
 
-`tabletNone`: Hide when in tablet media size. `ex) tabletNone`
+`tabletHide`: Hide when in tablet media size. `ex) tabletHide`
 
 `phoneShow`: Show when in phone media size. `ex) phoneShow`
 
-`phoneNone`: Hide when in phone media size. `ex) phoneNone`
+`phoneHide`: Hide when in phone media size. `ex) phoneHide`
 
 `desktop`: Specify css when in desktop media size. `ex) desktop="color: red;"`
 
@@ -145,27 +145,27 @@ export default class ReactEasyStyledComponent extends Component {
 
 ## \<View />
 
-`flex`: Specify flex. ex.`flex="3"`
+`flex`: Specify flex. `ex) flex="3"`
 
-`alignEnd`: align-items: flex-end; default: `center`
+`alignEnd`: align-items: flex-end; `default: center`
 
-`alignStart`: align-items: flex-start; default: `center`
+`alignStart`: align-items: flex-start; `default: center`
 
-`justifyEnd`: justify-content: flex-end; default: `center`
+`justifyEnd`: justify-content: flex-end; `default: center`
 
-`justifyStart`: justify-content: flex-start; default: `center`
+`justifyStart`: justify-content: flex-start; `default: center`
 
-`justifyBetween`: justify-content: space-between; default: `center`
+`justifyBetween`: justify-content: space-between; `default: center`
 
-`justifyAround`: justify-content: space-around; default: `center`
+`justifyAround`: justify-content: space-around; `default: center`
 
 ## \<Text />
 
-`size`: Specify font-size. ex.`size="25px"`
+`size`: Specify font-size. `ex) size="25px"`
 
-`color`: Specify color. ex.`color="#333"`
+`color`: Specify color. `ex) color="#333"`
 
-`weight`: Specify font-weight. ex.`weight="300"`
+`weight`: Specify font-weight. `ex) weight="300"`
 
 `button`: Create with fadeIn text button.
 
@@ -217,9 +217,9 @@ export default class Example extends Component {
   render() {
     return (
       <FlexView height="500px">
-        <View backColor="LightGreen" tabletNone />
+        <View backColor="LightGreen" tabletHide />
         <View backColor="LightBlue" display="none" phoneShow />
-        <View backColor="LightCoral" phoneNone />
+        <View backColor="LightCoral" phoneHide />
         <View 
           backColor="gray"
           desktop="background-color: red;"

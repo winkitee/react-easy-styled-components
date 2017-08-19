@@ -73,11 +73,11 @@ export default class ReactEasyStyledComponents {
       ${props => props.tablet && this.media().tablet`${props.tablet};`}
       ${props => props.phone && this.media().phone`${props.phone};`}
       ${props => props.desktopShow && this.media().desktop`display: flex;`}
-      ${props => props.desktopNone && this.media().desktop`display: none;`}
+      ${props => props.desktopHide && this.media().desktop`display: none;`}
       ${props => props.tabletShow && this.media().tablet`display: flex;`}
-      ${props => props.tabletNone && this.media().tablet`display: none;`}
+      ${props => props.tabletHide && this.media().tablet`display: none;`}
       ${props => props.phoneShow && this.media().phone`display: flex;`}
-      ${props => props.phoneNone && this.media().phone`display: none;`}
+      ${props => props.phoneHide && this.media().phone`display: none;`}
     `;
 
     this.optionProps = () => css`
