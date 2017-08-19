@@ -9,6 +9,7 @@ import styled, { css } from 'styled-components';
 
 export default class ReactEasyStyledComponents {
   media: Function;
+  customize: any;
   viewBaseProps: any;
   textBaseProps: any;
   mediaProps: any;
@@ -40,6 +41,10 @@ export default class ReactEasyStyledComponents {
         return acc;
       }, {});
     };
+    
+    this.customize = () => css`
+      ${props => props.customize && props.customize}  
+    `;
 
     this.viewBaseProps = () => css`
       ${props => props.backColor && `background-color: ${props.backColor};`}
@@ -90,6 +95,7 @@ export default class ReactEasyStyledComponents {
       flex-wrap: wrap;
       flex-direction: ${props => props.row ? 'row' : 'column'};
 
+      ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
       ${this.mediaProps}
@@ -110,7 +116,8 @@ export default class ReactEasyStyledComponents {
         props.justifyStart ||
         props.justifyBetween ||
         props.justifyAround) && 'justify-content: center;'}
-
+      
+      ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
       ${this.mediaProps}
@@ -128,6 +135,7 @@ export default class ReactEasyStyledComponents {
         }
       `}
       
+      ${this.customize}
       ${this.viewBaseProps}
       ${this.textBaseProps}
       ${this.optionProps}
@@ -141,6 +149,7 @@ export default class ReactEasyStyledComponents {
       ${props => props.right && `right: ${props.right};`}
       ${props => props.bottom && `bottom: ${props.bottom};`}
 
+      ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
       ${this.mediaProps}

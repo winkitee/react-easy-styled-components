@@ -193,9 +193,9 @@ import ReactEasyStyledComponents from 'react-easy-styled-component';
 const { FlexView, View, Text, AbsoluteView } = new ReactEasyStyledComponents();
 ```
 
-### custom sizes
+### customize sizes
 ```javascript
-// custom
+// customize
 import ReactEasyStyledComponents from 'react-easy-styled-component';
 
 const sizes = {
