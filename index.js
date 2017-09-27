@@ -2,28 +2,14 @@
  * Copyright 2017 KIM SEUNG YEON.
  * manbo91@naver.com
  * https://github.com/manbo91/react-easy-styled-components
- * @flow
 */
 
 import styled, { css } from 'styled-components';
 
 export default class ReactEasyStyledComponents {
-  media: Function;
-  button: any;
-  customize: any;
-  display: any;
-  viewBaseProps: any;
-  textBaseProps: any;
-  mediaProps: any;
-  optionProps: any;
-  FlexView: any;
-  View: any;
-  Text: any;
-  AbsoluteView: any;
-
-  constructor(sizes: any) {
-    this.media = (): Object => {
-      let sizesObj: Object = sizes;
+  constructor(sizes) {
+    this.media = () => {
+      let sizesObj = sizes;
       if (!sizesObj) {
         // default sizes
         sizesObj = {
