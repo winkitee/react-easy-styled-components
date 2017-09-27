@@ -41,9 +41,9 @@ export default class ReactEasyStyledComponents {
         return acc;
       }, {});
     };
-    
+
     this.customize = () => css`
-      ${props => props.customize && props.customize}  
+      ${props => props.customize && props.customize}
     `;
 
     this.viewBaseProps = () => css`
@@ -53,12 +53,12 @@ export default class ReactEasyStyledComponents {
       ${props => props.margin && `margin: ${props.margin};`}
       ${props => props.padding && `padding: ${props.padding};`}
       ${props => props.border && `border: ${props.border};`}
-      ${props => props.zIndex && `z-index: ${props.zIndex};`}      
+      ${props => props.zIndex && `z-index: ${props.zIndex};`}
       ${props => props.backgroundImage && `
         background-image: ${props.backgroundImage};
         background-repeat:no-repeat;
         background-size: cover;
-        background-position: center top;
+        background-position: center;
       `}
     `;
 
@@ -116,7 +116,7 @@ export default class ReactEasyStyledComponents {
         props.justifyStart ||
         props.justifyBetween ||
         props.justifyAround) && 'justify-content: center;'}
-      
+
       ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
@@ -126,15 +126,15 @@ export default class ReactEasyStyledComponents {
     this.Text = styled.div`
       display: ${props => props.display || 'flex'};
       text-align: center;
-  
+
       ${props => props.button && `
         &:hover {
           cursor: pointer;
-          opacity: 0.3;
+          opacity: 0.5;
           transition: all 200ms ease-out;
         }
       `}
-      
+
       ${this.customize}
       ${this.viewBaseProps}
       ${this.textBaseProps}
@@ -144,8 +144,8 @@ export default class ReactEasyStyledComponents {
 
     this.AbsoluteView = styled.div`
       position: absolute;
-      top: ${props => props.top || 0};
-      left: ${props => props.left || 0};
+      ${props => props.top && `top: ${props.top};`}
+      ${props => props.left && `left: ${props.left};`}
       ${props => props.right && `right: ${props.right};`}
       ${props => props.bottom && `bottom: ${props.bottom};`}
 
