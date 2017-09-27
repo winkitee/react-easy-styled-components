@@ -9,7 +9,9 @@ import styled, { css } from 'styled-components';
 
 export default class ReactEasyStyledComponents {
   media: Function;
+  button: any;
   customize: any;
+  display: any;
   viewBaseProps: any;
   textBaseProps: any;
   mediaProps: any;
@@ -42,8 +44,22 @@ export default class ReactEasyStyledComponents {
       }, {});
     };
 
+    this.button = () => css`
+      ${props => props.button && `
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+          transition: all 200ms ease-out;
+        }
+      `}
+    `;
+
     this.customize = () => css`
       ${props => props.customize && props.customize}
+    `;
+
+    this.display = () => css`
+      display: ${props => props.display || 'flex'};
     `;
 
     this.viewBaseProps = () => css`
@@ -51,8 +67,20 @@ export default class ReactEasyStyledComponents {
       ${props => props.width && `width: ${props.width};`}
       ${props => props.height && `height: ${props.height};`}
       ${props => props.margin && `margin: ${props.margin};`}
+      ${props => props.marginTop && `margin-top: ${props.marginTop};`}
+      ${props => props.marginLeft && `margin-left: ${props.marginLeft};`}
+      ${props => props.marginRight && `margin-right: ${props.marginRight};`}
+      ${props => props.marginBottom && `margin-bottom: ${props.marginBottom};`}
       ${props => props.padding && `padding: ${props.padding};`}
+      ${props => props.paddingTop && `padding-top: ${props.paddingTop};`}
+      ${props => props.paddingLeft && `padding-left: ${props.paddingLeft};`}
+      ${props => props.paddingRight && `padding-right: ${props.paddingRight};`}
+      ${props => props.paddingBottom && `padding-bottom: ${props.paddingBottom};`}
       ${props => props.border && `border: ${props.border};`}
+      ${props => props.borderTop && `border-top: ${props.borderTop};`}
+      ${props => props.borderBottom && `border-bottom: ${props.borderBottom};`}
+      ${props => props.borderLeft && `border-left: ${props.borderLeft};`}
+      ${props => props.borderRight && `border-right: ${props.borderRight};`}
       ${props => props.zIndex && `z-index: ${props.zIndex};`}
       ${props => props.backgroundImage && `
         background-image: ${props.backgroundImage};
@@ -63,6 +91,7 @@ export default class ReactEasyStyledComponents {
     `;
 
     this.textBaseProps = () => css`
+      text-align: ${props => props.textAlign || 'center'};
       ${props => props.size && `font-size: ${props.size};`}
       ${props => props.color && `color: ${props.color};`}
       ${props => props.weight && `font-weight: ${props.weight};`}
@@ -91,10 +120,11 @@ export default class ReactEasyStyledComponents {
     `;
 
     this.FlexView = styled.div`
-      display: ${props => props.display || 'flex'};
+      ${this.display}
       flex-wrap: wrap;
       flex-direction: ${props => props.row ? 'row' : 'column'};
 
+      ${this.button}
       ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
@@ -102,7 +132,7 @@ export default class ReactEasyStyledComponents {
     `;
 
     this.View = styled.div`
-      display: ${props => props.display || 'flex'};
+      ${this.display}
       flex: ${props => props.flex || '1'};
       flex-direction: ${props => props.row ? 'row' : 'column'};
       ${props => props.alignEnd && 'align-items: flex-end;'}
@@ -117,6 +147,7 @@ export default class ReactEasyStyledComponents {
         props.justifyBetween ||
         props.justifyAround) && 'justify-content: center;'}
 
+      ${this.button}
       ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
@@ -124,8 +155,7 @@ export default class ReactEasyStyledComponents {
     `;
 
     this.Text = styled.div`
-      display: ${props => props.display || 'flex'};
-      text-align: center;
+      ${this.display}
 
       ${props => props.button && `
         &:hover {
@@ -135,6 +165,9 @@ export default class ReactEasyStyledComponents {
         }
       `}
 
+      word-wrap: break-word;
+
+      ${this.button}
       ${this.customize}
       ${this.viewBaseProps}
       ${this.textBaseProps}
@@ -143,12 +176,22 @@ export default class ReactEasyStyledComponents {
     `;
 
     this.AbsoluteView = styled.div`
+      ${props => props.display && `display: ${props.display};`}
       position: absolute;
       ${props => props.top && `top: ${props.top};`}
       ${props => props.left && `left: ${props.left};`}
       ${props => props.right && `right: ${props.right};`}
       ${props => props.bottom && `bottom: ${props.bottom};`}
 
+      ${props => props.button && `
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+          transition: all 200ms ease-out;
+        }
+      `}
+
+      ${this.button}
       ${this.customize}
       ${this.viewBaseProps}
       ${this.optionProps}
