@@ -99,7 +99,9 @@ export default class ReactEasyStyledComponent extends Component {
 
 ## Public Props
 
-`display` : Specify display `default: flex`
+`display`: Specify display. `default: flex`
+
+`customize`: Same as html style. `ex) min-width: 1080px; border-radius: 1px solid;`
 
 `width`: Specify width. `ex) width="100%"`
 

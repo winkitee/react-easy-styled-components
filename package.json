@@ -1,6 +1,6 @@
 {
   "name": "react-easy-styled-components",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "It was created by applying styled-components with reference to react-native style.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "styled-components"
   ],
   "author": "Seungyeon Kim",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/manbo91/react-easy-styeld-components/issues"
   },
