@@ -13,7 +13,7 @@ $npm install --save react-easy-styled-components
 ```javascript
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
-import ReactEasyStyledComponents from 'react-easy-styled-components';
+import Resc from 'react-easy-styled-components';
 
 const sizes = {
   desktop: 1068,
@@ -22,7 +22,7 @@ const sizes = {
 }
 
 // Apply media size
-const { FlexView, View, Text } = new ReactEasyStyledComponents(sizes);
+const { FlexView, View, Text } = new Resc(sizes);
 
 const theme = {
   textMargin: '0 5px',
@@ -149,6 +149,8 @@ export default class ReactEasyStyledComponent extends Component {
 
 `flex`: Specify flex. `ex) flex="3"`
 
+`row` : flex-deirection: row; `default: column`
+
 `alignEnd`: align-items: flex-end; `default: center`
 
 `alignStart`: align-items: flex-start; `default: center`
@@ -191,14 +193,14 @@ const theme = {
 // tablet: 768,
 // phone: 376
 
-import ReactEasyStyledComponents from 'react-easy-styled-component';
-const { FlexView, View, Text, AbsoluteView } = new ReactEasyStyledComponents();
+import Resc from 'react-easy-styled-component';
+const { FlexView, View, Text, AbsoluteView } = new Resc();
 ```
 
 ### customize sizes
 ```javascript
 // customize
-import ReactEasyStyledComponents from 'react-easy-styled-component';
+import Resc from 'react-easy-styled-component';
 
 const sizes = {
   desktop: 1220,
@@ -206,14 +208,14 @@ const sizes = {
   phone: 414,
 }
 
-const { FlexView, View, Text, AbsoluteView } = new ReactEasyStyledComponents(sizes);
+const { FlexView, View, Text, AbsoluteView } = new Resc(sizes);
 ```
 
 ### example
 ```javascript
 import React, { Component } from 'react';
-import ReactEasyStyledComponents from 'react-easy-styled-component';
-const { FlexView, View } = new ReactEasyStyledComponents();
+import Resc from 'react-easy-styled-component';
+const { FlexView, View } = new Resc();
 
 export default class Example extends Component {
   render() {
