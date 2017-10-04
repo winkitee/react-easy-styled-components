@@ -1,6 +1,6 @@
 {
   "name": "react-easy-styled-components",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "It was created by applying styled-components with reference to react-native style.",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,13 @@
     "url": "https://github.com/manbo91/react-easy-styeld-components/issues"
   },
   "homepage": "https://github.com/manbo91/react-easy-styeld-components#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "dependencies": {
-    "styled-components": "^2.1.2"
+    "babel-cli": "^6.26.0",
+    "styled-components": "^2.2.1"
   }
 }
