@@ -21,13 +21,8 @@
     "url": "https://github.com/manbo91/react-easy-styeld-components/issues"
   },
   "homepage": "https://github.com/manbo91/react-easy-styeld-components#readme",
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "styled-components": "^2.2.1"
   }
 }
+ 

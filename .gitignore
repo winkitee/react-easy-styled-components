@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/es6.js
 
 npm-debug.log*
 yarn-debug.log*
