@@ -163,6 +163,20 @@ export default class ReactEasyStyledComponent extends Component {
 
 `justifyAround`: justify-content: space-around; `default: center`
 
+## \<AbsoluteView>
+
+`display`: Specify display. `ex) display="none"`
+
+`position`: position: absolute; `default: absolute`
+
+`top`: Specify top. `ex) top="10px"`
+
+`left`: Specify left. `ex) left="0"`
+
+`right`: Specify right. `ex) right="20px"`
+
+`bottom`: Specify bottom. `ex) bottom="30px"`
+
 ## \<Text />
 
 `size`: Specify font-size. `ex) size="25px"`

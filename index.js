@@ -16,8 +16,8 @@ var _templateObject = _taggedTemplateLiteral(['\n          @media (max-width: ',
     _templateObject10 = _taggedTemplateLiteral(['\n      ', '\n      ', '\n    '], ['\n      ', '\n      ', '\n    ']),
     _templateObject11 = _taggedTemplateLiteral(['\n      ', '\n      flex-wrap: wrap;\n      flex-direction: ', ';\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n      flex-wrap: wrap;\n      flex-direction: ', ';\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']),
     _templateObject12 = _taggedTemplateLiteral(['\n      ', '\n      flex: ', ';\n      flex-direction: ', ';\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n      flex: ', ';\n      flex-direction: ', ';\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']),
-    _templateObject13 = _taggedTemplateLiteral(['\n      ', '\n\n      ', '\n\n      word-wrap: break-word;\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n\n      ', '\n\n      word-wrap: break-word;\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']),
-    _templateObject14 = _taggedTemplateLiteral(['\n      ', '\n      position: absolute;\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n      position: absolute;\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']);
+    _templateObject13 = _taggedTemplateLiteral(['\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']),
+    _templateObject14 = _taggedTemplateLiteral(['\n      ', '\n      position: ', ';\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    '], ['\n      ', '\n      position: ', ';\n      ', '\n      ', '\n      ', '\n      ', '\n\n      ', '\n      ', '\n      ', '\n      ', '\n      ', '\n    ']);
 
 var _styledComponents = require('styled-components');
 
@@ -198,12 +198,12 @@ var ReactEasyStyledComponents = function ReactEasyStyledComponents(sizes) {
     return !(props.justifyEnd || props.justifyStart || props.justifyBetween || props.justifyAround) && 'justify-content: center;';
   }, this.button, this.customize, this.viewBaseProps, this.optionProps, this.mediaProps);
 
-  this.Text = _styledComponents2.default.div(_templateObject13, this.display, function (props) {
-    return props.button && '\n        &:hover {\n          cursor: pointer;\n          opacity: 0.5;\n          transition: all 200ms ease-out;\n        }\n      ';
-  }, this.button, this.customize, this.viewBaseProps, this.textBaseProps, this.optionProps, this.mediaProps);
+  this.Text = _styledComponents2.default.div(_templateObject13, this.display, this.button, this.customize, this.viewBaseProps, this.textBaseProps, this.optionProps, this.mediaProps);
 
   this.AbsoluteView = _styledComponents2.default.div(_templateObject14, function (props) {
     return props.display && 'display: ' + props.display + ';';
+  }, function (props) {
+    return props.position || 'absolute';
   }, function (props) {
     return props.top && 'top: ' + props.top + ';';
   }, function (props) {
@@ -212,8 +212,6 @@ var ReactEasyStyledComponents = function ReactEasyStyledComponents(sizes) {
     return props.right && 'right: ' + props.right + ';';
   }, function (props) {
     return props.bottom && 'bottom: ' + props.bottom + ';';
-  }, function (props) {
-    return props.button && '\n        &:hover {\n          cursor: pointer;\n          opacity: 0.5;\n          transition: all 200ms ease-out;\n        }\n      ';
   }, this.button, this.customize, this.viewBaseProps, this.optionProps, this.mediaProps);
 };
 
