@@ -3,7 +3,9 @@
 It was created by applying styled-components with reference to react-native style.
 
 ### Getting Started
+
 ---
+
 ```
 $npm install --save react-easy-styled-components
 ```
@@ -11,25 +13,25 @@ $npm install --save react-easy-styled-components
 ## example
 
 ```javascript
-import React, { Component } from 'react';
-import { ThemeProvider } from 'styled-components';
-import Resc from 'react-easy-styled-components';
+import React, { Component } from "react";
+import { ThemeProvider } from "styled-components";
+import Resc from "react-easy-styled-components";
 
 const sizes = {
   desktop: 1068,
   tablet: 820,
-  phone: 360,
-}
+  phone: 360
+};
 
 // Apply media size
 const { FlexView, View, Text } = new Resc(sizes);
 
 const theme = {
-  textMargin: '0 5px',
-  textPadding: '15px',
-  fontColor: '#333',
-  fontSize: '16px',
-  fontWeight: '400'
+  textMargin: "0 5px",
+  textPadding: "15px",
+  fontColor: "#333",
+  fontSize: "16px",
+  fontWeight: "400"
 };
 
 export default class ReactEasyStyledComponent extends Component {
@@ -38,21 +40,22 @@ export default class ReactEasyStyledComponent extends Component {
       <ThemeProvider theme={theme}>
         <div>
           <FlexView height="280px">
-            <View backColor="rgb(240, 240, 240)">
-              <Text margin="20px" size="30px" weight="600">hello manbo</Text>
+            <View row backColor="rgb(240, 240, 240)">
+              <Text margin="20px" size="30px" weight="600">
+                hello manbo
+              </Text>
               <Text color="LightBlue">LightBlue</Text>
-              <Text
-                button
-                color="LightCoral"
-                padding="30px"
-                margin="0 20px"
-              >
+              <Text button color="LightCoral" padding="30px" margin="0 20px">
                 LightCoral Button
               </Text>
             </View>
-            <View backColor="rgb(50, 50, 50)">
-              <Text color="#fff" margin="10px">hello</Text>
-              <Text color="#fff" margin="0 10px">bye</Text>
+            <View row backColor="rgb(50, 50, 50)">
+              <Text color="#fff" margin="10px">
+                hello
+              </Text>
+              <Text color="#fff" margin="0 10px">
+                bye
+              </Text>
             </View>
           </FlexView>
           <FlexView row height="300px">
@@ -188,47 +191,51 @@ export default class ReactEasyStyledComponent extends Component {
 `button`: Create with fadeIn text button.
 
 ## Theme
+
 ```javascript
 const theme = {
-  textMargin: '0 5px',
-  textPadding: '15px',
-  fontColor: '#333',
-  fontSize: '16px',
-  fontWeight: '400'
+  textMargin: "0 5px",
+  textPadding: "15px",
+  fontColor: "#333",
+  fontSize: "16px",
+  fontWeight: "400"
 };
 ```
 
 ## Media Usage
 
 ### basic
+
 ```javascript
 // default media size
 // desktop: 992,
 // tablet: 768,
 // phone: 376
 
-import Resc from 'react-easy-styled-component';
+import Resc from "react-easy-styled-component";
 const { FlexView, View, Text, AbsoluteView } = new Resc();
 ```
 
 ### customize sizes
+
 ```javascript
 // customize
-import Resc from 'react-easy-styled-component';
+import Resc from "react-easy-styled-component";
 
 const sizes = {
   desktop: 1220,
   tablet: 830,
-  phone: 414,
-}
+  phone: 414
+};
 
 const { FlexView, View, Text, AbsoluteView } = new Resc(sizes);
 ```
 
 ### example
+
 ```javascript
-import React, { Component } from 'react';
-import Resc from 'react-easy-styled-component';
+import React, { Component } from "react";
+import Resc from "react-easy-styled-component";
 const { FlexView, View } = new Resc();
 
 export default class Example extends Component {
@@ -238,7 +245,7 @@ export default class Example extends Component {
         <View backColor="LightGreen" tabletHide />
         <View backColor="LightBlue" display="none" phoneShow />
         <View backColor="LightCoral" phoneHide />
-        <View 
+        <View
           backColor="gray"
           desktop="background-color: red;"
           tablet="background-color: blue;"
