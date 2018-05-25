@@ -146,13 +146,13 @@ export default class ReactEasyStyledComponent extends Component {
 
 ## \<FlexView />
 
-`row` : flex-deirection: column; `default: row`
+`column` : flex-deirection: column; `default: row`
 
 ## \<View />
 
 `flex`: Specify flex. `ex) flex="3"`
 
-`row` : flex-deirection: column; `default: row`
+`column` : flex-deirection: column; `default: row`
 
 `alignEnd`: align-items: flex-end; `default: center`
 
