@@ -108,7 +108,7 @@ export default class ReactEasyStyledComponents {
     this.FlexView = styled.div`
       ${this.display}
       flex-wrap: wrap;
-      flex-direction: ${props => props.row ? 'row' : 'column'};
+      flex-direction: ${props => props.column ? 'column' : 'row'};
 
       ${this.button}
       ${this.customize}
@@ -120,7 +120,7 @@ export default class ReactEasyStyledComponents {
     this.View = styled.div`
       ${this.display}
       flex: ${props => props.flex || '1'};
-      flex-direction: ${props => props.row ? 'row' : 'column'};
+      flex-direction: ${props => props.column ? 'column' : 'row'};
       ${props => props.alignEnd && 'align-items: flex-end;'}
       ${props => props.alignStart && 'align-items: flex-start;'}
       ${props => props.justifyEnd && 'justify-content: flex-end;'}

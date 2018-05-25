@@ -40,7 +40,7 @@ export default class ReactEasyStyledComponent extends Component {
       <ThemeProvider theme={theme}>
         <div>
           <FlexView height="280px">
-            <View row backColor="rgb(240, 240, 240)">
+            <View backColor="rgb(240, 240, 240)">
               <Text margin="20px" size="30px" weight="600">
                 hello manbo
               </Text>
@@ -49,7 +49,7 @@ export default class ReactEasyStyledComponent extends Component {
                 LightCoral Button
               </Text>
             </View>
-            <View row backColor="rgb(50, 50, 50)">
+            <View backColor="rgb(50, 50, 50)">
               <Text color="#fff" margin="10px">
                 hello
               </Text>
@@ -146,13 +146,13 @@ export default class ReactEasyStyledComponent extends Component {
 
 ## \<FlexView />
 
-`row` : flex-deirection: row; `default: column`
+`row` : flex-deirection: column; `default: row`
 
 ## \<View />
 
 `flex`: Specify flex. `ex) flex="3"`
 
-`row` : flex-deirection: row; `default: column`
+`row` : flex-deirection: column; `default: row`
 
 `alignEnd`: align-items: flex-end; `default: center`
 
