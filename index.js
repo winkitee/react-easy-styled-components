@@ -173,13 +173,13 @@ var ReactEasyStyledComponents = function ReactEasyStyledComponents(sizes) {
   };
 
   this.FlexView = _styledComponents2.default.div(_templateObject11, this.display, function (props) {
-    return props.row ? 'row' : 'column';
+    return props.column ? 'column' : 'row';
   }, this.button, this.customize, this.viewBaseProps, this.optionProps, this.mediaProps);
 
   this.View = _styledComponents2.default.div(_templateObject12, this.display, function (props) {
     return props.flex || '1';
   }, function (props) {
-    return props.row ? 'row' : 'column';
+    return props.column ? 'column' : 'row';
   }, function (props) {
     return props.alignEnd && 'align-items: flex-end;';
   }, function (props) {
